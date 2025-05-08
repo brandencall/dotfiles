@@ -1,1 +1,3 @@
-../../dotfiles/.config/ghostty/config
+background = #000000
+background-opacity = 0.9
+font-size = 18 
