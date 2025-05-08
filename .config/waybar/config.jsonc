@@ -1,0 +1,107 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top", 
+    "position": "top", 
+    "height": 30, 
+    "spacing": 4, 
+
+
+    "modules-left": [
+        "group/hardware",
+        "tray"
+    ],
+    "modules-center": [
+        "hyprland/workspaces",
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "clock",
+        "custom/power"
+    ],
+
+
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": ["cpu", "memory", "temperature", "custom/updates"]
+    },
+
+    "tray": {
+        "icon-size": 24,
+        "show-passive-items": true,
+        "spacing": 10
+    },
+
+    "custom/updates": {
+        "format": "  {}",
+        "interval": 60,
+        "exec": "CHECKUPDATES_DB=/tmp/checkup-db-${UID}-$$ checkupdates | wc -l",
+        "on-click": "ghostty -e 'yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
+        "signal": 8,
+        "tooltip": false,
+    },
+
+     "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "warp-on-scroll": false,
+         "format": "{name}",
+     },
+
+    "clock": {
+        "format": "{:%I:%M %p\n%m/%d/%Y}",
+        "tooltip": true,
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "format": {
+                "today": "<span color='#fAfBfC'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "shift_down",
+            "on-click": "shift_up"
+        } 
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% ",
+        "tooltip": true,
+        "tooltip-format": "Used: {used} GB, Total: {total} GB"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""],
+        "tooltip": false
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": " ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "  ({signalStrength}%)",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "bash ~/scripts/toggle_process.sh nm-connection-editor",
+        "on-click-right": "kitty nmtui",
+    },
+    "pulseaudio": {
+        "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-muted": " {format_source}",
+        "format-source-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "~/scripts/toggle_process.sh pavucontrol"
+    },
+    "custom/power": {
+        "format" : "⏻ ",
+		"tooltip": false,
+        "on-click": "wlogout"
+		}
+    }
+}

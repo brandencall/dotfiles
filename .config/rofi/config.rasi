@@ -1,0 +1,21 @@
+configuration {
+    display-drun: "Applications";
+    display-window: "Windows";
+    drun-display-format: "{icon} {name}";
+    modi: "combi,window,run,drun";
+    show-icons: true;
+    terminal: "ghostty";
+    hide-scrollbar: true;
+    sidebar-mode: true;
+    font: "JetBrains Mono 14";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+@theme "~/.config/rofi/theme.rasi"

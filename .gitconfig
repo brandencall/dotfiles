@@ -1,0 +1,5 @@
+[user]
+	email = brandencall@live.com
+	name = Branden Call
+[core]
+	editor = nvim

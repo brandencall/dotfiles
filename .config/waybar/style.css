@@ -1,0 +1,142 @@
+@import url('../../.cache/wal/colors-waybar.css');
+
+* {
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+#hardware{
+    color: @color7;
+    margin: 10px 0px 5px 0px;
+    padding: 7px;
+    border-radius: 10px;
+    background: alpha(@background, .6);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+}
+
+    
+.modules-center {
+    color: @color7;
+    margin: 10px 0px 5px 0px;
+    padding: 7px;
+    border-radius: 10px;
+    background: alpha(@background, .6);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+}
+
+.modules-right {
+    color: @color7;
+    margin: 10px 0px 5px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    background: alpha(@background, .6);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+}
+
+#workspaces button {
+    padding: 0 5px;
+    margin: 2px;
+    color: @color7;
+}
+
+#workspaces button.active {
+    color: @color7;
+    background: @color11;
+}
+
+#workspaces button:hover {
+    background: @color9;
+}
+
+#workspaces button.focused {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: @color9;
+}
+
+#network,
+#pulseaudio,
+#clock{
+    color: @color7;
+    padding: 0 5px;
+}
+
+#custom-updates{
+    padding: 0px 5px;
+    transition: all .3s ease;
+    color:@color7;
+}
+
+#hardware .module {
+    padding: 0 7.5px;
+}
+
+#pulseaudio:hover, #clock:hover, #custom-power:hover, #custom-updates:hover{
+    transition: all .3s ease;
+    color: @color9;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+    color: @color7;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+
+label:focus {
+    background-color: #000000;
+}
+
+#network.disconnected {
+    background-color: @color11;
+}
+
+#network:hover {
+    transition: all .3s ease;
+    color: @color9;
+}
+
+#temperature.critical {
+    background-color: @color11;
+}
+
+#custom-power {
+    font-size: 24px;
+    padding: 0 0 0 5px;
+}
+
+#tray {
+    padding: 7px;
+}
+
+
