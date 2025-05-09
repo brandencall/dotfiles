@@ -34,7 +34,7 @@ window#waybar.chromium {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
 }
 
-    
+
 .modules-center {
     color: @color7;
     margin: 10px 0px 5px 0px;
@@ -44,10 +44,13 @@ window#waybar.chromium {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
 }
 
-.modules-right {
+#pulseaudio,
+#network,
+#clock,
+#custom-power {
     color: @color7;
     margin: 10px 0px 5px 0px;
-    padding: 10px;
+    padding: 7px;
     border-radius: 10px;
     background: alpha(@background, .6);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
@@ -132,7 +135,7 @@ label:focus {
 
 #custom-power {
     font-size: 24px;
-    padding: 0 0 0 5px;
+    padding: 0 10px 0 5px;
 }
 
 #tray {

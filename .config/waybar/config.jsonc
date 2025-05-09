@@ -8,16 +8,16 @@
 
     "modules-left": [
         "group/hardware",
-        "tray"
     ],
     "modules-center": [
         "hyprland/workspaces",
     ],
     "modules-right": [
+        "tray",
         "pulseaudio",
         "network",
         "clock",
-        "custom/power"
+        "custom/power",
     ],
 
 
@@ -63,8 +63,9 @@
         } 
     },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+     "interval": 1,
+     "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
+     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
     },
     "memory": {
         "format": "{}% ",
@@ -86,7 +87,7 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "on-click": "bash ~/scripts/toggle_process.sh nm-connection-editor",
-        "on-click-right": "kitty nmtui",
+        "on-click-right": "ghostty -e nmtui",
     },
     "pulseaudio": {
         "scroll-step": 1, // %, can be a float
