@@ -2,7 +2,8 @@ configuration {
     display-drun: "Applications";
     display-window: "Windows";
     drun-display-format: "{icon} {name}";
-    modi: "combi,window,run,drun,ssh";
+    modi: "combi";
+    combi-modi: "window,drun,ssh";
     show-icons: true;
     terminal: "ghostty";
     hide-scrollbar: true;
