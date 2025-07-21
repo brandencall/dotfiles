@@ -14,16 +14,17 @@
     ],
     "modules-right": [
         "tray",
-        "pulseaudio",
-        "network",
-        "clock",
-        "custom/power",
+        "group/right",
     ],
-
 
     "group/hardware": {
         "orientation": "horizontal",
         "modules": ["cpu", "memory", "temperature", "custom/updates"]
+    },
+
+    "group/right": {
+        "orientation": "horizontal",
+        "modules": ["pulseaudio", "network", "clock", "custom/power"]
     },
 
     "tray": {

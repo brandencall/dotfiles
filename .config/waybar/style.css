@@ -25,7 +25,7 @@ window#waybar.chromium {
     border: none;
 }
 
-#hardware{
+#hardware {
     color: @color7;
     margin: 10px 0px 5px 0px;
     padding: 7px;
@@ -44,10 +44,7 @@ window#waybar.chromium {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
 }
 
-#pulseaudio,
-#network,
-#clock,
-#custom-power {
+#right {
     color: @color7;
     margin: 10px 0px 5px 0px;
     padding: 7px;
@@ -135,7 +132,7 @@ label:focus {
 
 #custom-power {
     font-size: 24px;
-    padding: 0 10px 0 5px;
+    padding: 0 0 0 5px;
 }
 
 #tray {
