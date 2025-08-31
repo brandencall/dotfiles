@@ -3,3 +3,5 @@
 	name = Branden Call
 [core]
 	editor = nvim
+[init]
+	defaultBranch = main

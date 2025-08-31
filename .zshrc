@@ -10,6 +10,17 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+
+# terminal-fzf
+#terminal_fzf() {
+#    zle -I
+#    { ~/Projects/Cpp/terminal-fzf/termfzf & }
+#}
+#zle -N terminal_fzf
+#bindkey '^F' terminal_fzf
+
+bindkey -s '^F' '~/Projects/Cpp/terminal-fzf/termfzf\n' 
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
