@@ -19,7 +19,7 @@ ZSH_THEME="robbyrussell"
 #zle -N terminal_fzf
 #bindkey '^F' terminal_fzf
 
-bindkey -s '^F' '~/Projects/Cpp/terminal-fzf/termfzf\n' 
+bindkey -s '^F' '~/projects/Cpp/terminal-fzf/termfzf\n' 
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
