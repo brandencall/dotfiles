@@ -33,11 +33,16 @@
         "spacing": 10
     },
 
+    "custom/path": {
+        "exec": "echo $PATH",
+        "interval": 1 
+    },
+
     "custom/updates": {
         "format": "  {}",
         "interval": 60,
         "exec": "CHECKUPDATES_DB=/tmp/checkup-db-${UID}-$$ checkupdates | wc -l",
-        "on-click": "ghostty -e 'yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
+        "on-click": "ghostty -e /bin/zsh -c \"yay -Syu; echo Done - Press enter to exit; read\"; pkill -SIGRTMIN+8 waybar",
         "signal": 8,
         "tooltip": false,
     },
